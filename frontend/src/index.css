@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-water-50 via-blue-50 to-cyan-50 min-h-screen;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  * {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-water-600 to-water-700 hover:from-water-700 hover:to-water-800 
+           text-white font-semibold py-2.5 px-6 rounded-xl transition-all duration-300 
+           shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95
+           border-0 outline-none focus:ring-4 focus:ring-water-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 font-semibold py-2.5 px-6 rounded-xl 
+           transition-all duration-300 shadow-md hover:shadow-lg border-2 border-gray-200 
+           hover:border-gray-300 transform hover:scale-105 active:scale-95
+           focus:ring-4 focus:ring-gray-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-xl p-6 border border-gray-100 
+           hover:shadow-2xl transition-all duration-300 backdrop-blur-sm
+           bg-opacity-95;
+  }
+  
+  .card-gradient {
+    @apply bg-gradient-to-br rounded-2xl shadow-2xl p-6 text-white
+           transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-xl 
+           focus:ring-4 focus:ring-water-300 focus:border-water-500 
+           outline-none transition-all duration-300 bg-white
+           hover:border-gray-300 placeholder-gray-400;
+  }
+  
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold inline-flex items-center
+           shadow-sm;
+  }
+  
+  .stat-card {
+    @apply card-gradient transform hover:scale-105 transition-all duration-300
+           backdrop-blur-sm;
+  }
+}
+
