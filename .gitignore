@@ -35,5 +35,6 @@ Thumbs.db
 *.db
 
 # Project Specific Exclusions
+DOCUMENTATION/
 "synopsis,er and schema/"
 
