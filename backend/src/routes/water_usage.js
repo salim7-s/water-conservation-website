@@ -179,7 +179,7 @@ router.post('/', validateWaterUsage, async (req, res) => {
     const [result] = await pool.execute(
       `INSERT INTO water_usage (user_id, source_id, purpose, date, quantity_used, cost) 
        VALUES (?, ?, ?, ?, ?, ?)`,
-      [user_id, source_id, purpose, date, quantity_used, cost || 0]
+      [user_id, source_id || 1, purpose || 'domestic', date, quantity_used, cost || 0]
     );
 
     const [newUsage] = await pool.execute(

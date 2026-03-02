@@ -45,9 +45,10 @@ export const validateAlert = [
  */
 export const validateWaterUsage = [
   body('user_id').isInt().withMessage('Valid user ID is required'),
-  body('source_id').isInt().withMessage('Valid source ID is required'),
-  body('quantity_used').isFloat({ min: 0 }).withMessage('Quantity must be a positive number'),
-  body('date').isISO8601().withMessage('Valid date is required'),
+  // source_id is optional — user may not select a source
+  body('source_id').optional({ checkFalsy: true }).isInt().withMessage('source_id must be an integer if provided'),
+  body('quantity_used').isFloat({ min: 0.01 }).withMessage('Quantity must be greater than 0'),
+  body('date').isISO8601().withMessage('Valid date is required (YYYY-MM-DD)'),
   handleValidationErrors,
 ];
 

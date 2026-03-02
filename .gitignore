@@ -35,7 +35,5 @@ Thumbs.db
 *.db
 
 # Project Specific Exclusions
-DOCUMENTATION/
 "synopsis,er and schema/"
-backend/test_crud.mjs
 

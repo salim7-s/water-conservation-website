@@ -35,7 +35,7 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [goals, setGoals] = useState([]);
   const [alerts, setAlerts] = useState([]);
-  const { data: meterData, connected } = useSSE('/api/stream/meters');
+  const { data: meterData, connected } = useSSE('/stream/meters');
 
   useEffect(() => {
     fetchStats();
