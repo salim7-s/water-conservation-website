@@ -1,0 +1,1 @@
+Full-stack DBMS project for tracking household water consumption with real-time alerts, conservation goals, and smart meter analytics
