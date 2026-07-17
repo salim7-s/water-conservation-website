@@ -76,8 +76,6 @@ dbms project/
 │       ├── components/       # Layout, Navbar
 │       ├── hooks/            # useSSE (real-time smart meter)
 │       └── utils/            # api.js (Axios), auth.js (JWT helpers)
-├── DOCUMENTATION/            # 15 detailed markdown docs
-├── INTERVIEW_QA.md           # Interview prep — tech stack, DB, API, system design
 └── README.md
 ```
 
@@ -104,12 +102,6 @@ dbms project/
 - **Smart meter sync** — `total_usage` updated after each water record; real-time via SSE
 - **Scheduled jobs** — anomaly checks (6h), meter sync (30m), goal risk check (daily)
 - **Prediction engine** — next-week/month forecasts based on trend analysis
-
-## 📚 Documentation
-
-See [`DOCUMENTATION/`](./DOCUMENTATION/00_INDEX.md) for 15 detailed docs covering backend, frontend, database schema, and API endpoints.
-
-See [`INTERVIEW_QA.md`](./INTERVIEW_QA.md) for detailed Q&A covering all aspects of the project for technical interviews.
 
 ## 🗃️ Database Schema (8 Tables)
 
